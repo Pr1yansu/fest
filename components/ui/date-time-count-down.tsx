@@ -33,7 +33,7 @@ const DateTimeCountDown: React.FC = () => {
 
   return (
     <div className="mt-20 max-w-screen-xl mx-auto xl:text-[4vw] lg:text-[6vw] text-[8vw]">
-      <h4 className="flex justify-between text-orange-500">
+      <h4 className="flex justify-center md:gap-28 sm:gap-14 gap-5 text-orange-500">
         <div>
           <h4>{timeLeft.days}</h4>
           <p className="lg:text-4xl text-2xl text-center text-white">Days</p>

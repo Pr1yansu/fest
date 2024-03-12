@@ -57,11 +57,11 @@ const EventsCarousel = () => {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-[90%] h-full object-cover object-center"
+              className="w-full h-full object-cover object-center"
               src={event.url}
               alt="gaming"
             />
-            <div className="absolute z-20 bottom-0 py-3 text-white bg-white/5 w-full backdrop-blur-xl rounded-md flex justify-center">
+            <div className="absolute z-20 bottom-0 py-3 text-white bg-white/5 w-full backdrop-blur-xl rounded-md flex justify-center text-xl">
               {event.name}
             </div>
           </SwiperSlide>
