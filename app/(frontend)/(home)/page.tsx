@@ -27,9 +27,12 @@ const Home = () => {
                 Bigger.Grander.Wilder
               </h4>
               <h1 className="text-white lowercase title">GEMISHA</h1>
-              <div className="lg:flex lg:mt-24 mt-12 max-lg:space-y-4 justify-between">
+              <div className="sm:hidden">
+                <AudioPlayer />
+              </div>
+              <div className="flex lg:mt-24 mt-12 justify-between items-center">
                 <div>
-                  <h3 className="text-white lg:text-[3vw] sm:text-[5vw] text-[10vw]">
+                  <h3 className="text-white lg:text-[3vw] sm:text-[5vw] text-[10vw] text-start">
                     28
                   </h3>
                   <p className="text-teal-300 lg:text-[1.5vw] text-xl">
@@ -43,7 +46,7 @@ const Home = () => {
                   <p className="text-teal-300 lg:text-[1.5vw] text-xl">Hours</p>
                 </div>
                 <div>
-                  <h3 className="text-white lg:text-[3vw] sm:text-[5vw] text-[10vw] lg:text-end">
+                  <h3 className="text-white lg:text-[3vw] sm:text-[5vw] text-[10vw] text-end">
                     30K
                   </h3>
                   <p className="text-teal-300 lg:text-[1.5vw] text-xl">
@@ -51,7 +54,9 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <AudioPlayer />
+              <div className="max-sm:hidden">
+                <AudioPlayer />
+              </div>
               <div className="flex justify-center">
                 <Link
                   className="border-2 px-4 mx-auto mt-12 capitalize text-white lg:text-2xl sm:text-xl text-lg flex gap-2 items-center p-2 rounded-full"
@@ -78,16 +83,21 @@ const Home = () => {
       <section className="texture-right py-6">
         <Container>
           <div className="text-white py-6 text-center">
-            <h2 className="lg:text-[4vw] text-[6vw]">
+            <h2 className="lg:text-[4vw] sm:text-[6vw] text-[7vw]">
               WHAT IS <span className="text-teal-300">GEMISHA&apos;24</span>?
             </h2>
-            <p className={cn("lg:text-[1.5vw] text-[2vw]", exo.className)}>
+            <p
+              className={cn(
+                "lg:text-[1.5vw] sm:text-[2vw] text-[4vw] text-justify",
+                exo.className
+              )}
+            >
               &ldquo;Experience GEMISHA 2024, a dynamic tech fest showcasing
               model representation, innovative idea presentations, robotics, web
               development, quizzes, bridge building, and more. Join us for an
               8-hour journey of camaraderie and innovation!&rdquo;
             </p>
-            <h3 className="lg:text-[3vw] text-[4vw] lg:mt-40 mt-20">
+            <h3 className="lg:text-[3vw] sm:text-[4vw] text-[6vw] lg:mt-40 sm:mt-20 mt-10">
               &ldquo;Access Innovation&apos;s Vault With Us...&rdquo;
             </h3>
             <DateTimeCountDown />
@@ -103,11 +113,11 @@ const Home = () => {
               height={0}
               sizes="100vw"
               src={"/assets/register.png"}
-              className="w-full object-cover lg:object-center object-[-6vw]"
+              className="w-full relative object-cover lg:object-center object-[-6vw]"
               alt="register"
             />
           </div>
-          <div className="max-lg:mx-auto w-full text-center items-center space-y-6 px-4">
+          <div className="max-lg:mx-auto lg:w-1/2 w-full text-center items-center space-y-6 px-4">
             <Link
               className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-2 rounded-full w-full text-center px-4"
               href={"/register"}
@@ -122,12 +132,14 @@ const Home = () => {
             </h4>
           </div>
         </div>
-        <div className="relative z-20 lg:text-5xl text-3xl mt-10">
+        <div className="relative z-20 lg:text-5xl text-3xl -mt-3">
           <h2 className="text-teal-300  text-center mb-6">TECH FEST VENUE</h2>
           <h3 className="text-white  text-center">
             GARGI MEMORIAL INSTITUTE OF TECHNOLOGY
           </h3>
-          <p className="text-orange-600 text-xl text-center">
+          <p
+            className={cn("text-orange-600 text-xl text-center", exo.className)}
+          >
             Baruipur, Mouza Beralia, Balarampur, Kolkata
           </p>
         </div>

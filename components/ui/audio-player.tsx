@@ -11,7 +11,7 @@ const AudioPlayer = () => {
         setIsPlaying(!isPlaying);
       }}
     >
-      <div className=" border-2 flex items-center justify-evenly rounded-full gap-2 px-3 mx-auto">
+      <div className=" border-[3px] flex items-center justify-evenly rounded-full gap-2 px-3 mx-auto">
         {isPlaying ? (
           <button className="h-12 aspect-square relative" title="play-btn">
             <Image fill src={"/assets/pause.png"} alt="play btn" />
