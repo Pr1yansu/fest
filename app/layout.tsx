@@ -6,15 +6,15 @@ import Loading from "@/components/ui/loader";
 import ToastProvider from "@/providers/toast-provider";
 import AuthProvider from "@/providers/next-auth-session";
 
-export const fontAll = localFont({
+const fontAll = localFont({
   src: "../public/assets/font/Machi.ttf",
   variable: "--all-font",
 });
-export const fontTitle = localFont({
+const fontTitle = localFont({
   src: "../public/assets/font/divlit001.ttf",
   variable: "--title-font",
 });
-export const fontExo = Exo({
+const fontExo = Exo({
   style: "normal",
   weight: "400",
   subsets: ["latin"],
