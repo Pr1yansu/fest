@@ -1,8 +1,11 @@
+"use client";
 import React, { useEffect } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { signOut, useSession } from "next-auth/react";
+import { toast } from "react-hot-toast";
 
 interface NavProps {
   isOpen: boolean;
@@ -10,12 +13,13 @@ interface NavProps {
 }
 
 const MainNav: React.FC<NavProps> = ({ isOpen, setOpen }) => {
+  const { data } = useSession();
   const pathName = usePathname();
   const Links = [
     {
-      link: "/auth",
-      name: "Auth",
-      active: pathName === "/auth",
+      link: data ? null : "/auth",
+      name: data ? "Logout" : "Auth",
+      active: data ? false : pathName === "/auth",
     },
     {
       link: "/",
@@ -46,6 +50,15 @@ const MainNav: React.FC<NavProps> = ({ isOpen, setOpen }) => {
       document.body.style.overflow = "unset";
     }
   }, [isOpen]);
+
+  const logoutHandler = async () => {
+    try {
+      await signOut();
+    } catch (error) {
+      toast.error("Failed to logout");
+      return;
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -80,7 +93,7 @@ const MainNav: React.FC<NavProps> = ({ isOpen, setOpen }) => {
                       "border-2 text-center text-teal-300 mb-12",
                     link.active && "bordercustom rounded-full text-orange-600"
                   )}
-                  href={link.link}
+                  href={link.link ? link.link : "/"}
                 >
                   {link.name}
                 </Link>

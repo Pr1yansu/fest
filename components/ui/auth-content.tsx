@@ -24,9 +24,13 @@ import {
   VerifyOTP,
 } from "@/app/(backend)/auth-action/register";
 import { login } from "@/app/(backend)/auth-action/login";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const AuthBody = () => {
+  const router = useRouter();
+  const { data, status } = useSession();
   const [isMounted, setIsMounted] = useState(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isShow, setIsShow] = useState<boolean>(false);
@@ -35,10 +39,8 @@ const AuthBody = () => {
   const [remainingTime, setRemainingTime] = useState<string>("");
   const [otpExpirationTime, setOtpExpirationTime] = useState<Date | null>(null);
   const [errorSignIn, setErrorSignIn] = useState<string | null>(null);
-  const [errorLogin, setErrorLogin] = useState<string | null>(null);
   const [otpError, setOtpError] = useState<string | null>(null);
   const [successSignIn, setSuccessSignIn] = useState<string | null>(null);
-  const [successLogin, setSuccessLogin] = useState<string | null>(null);
   const [successOtp, setSuccessOtp] = useState<string | null>(null);
 
   useEffect(() => {
@@ -81,15 +83,15 @@ const AuthBody = () => {
           .then((data) => {
             if (data?.error) {
               loginForm.reset();
-              setErrorLogin(data.error);
+              toast.error(data.error);
             }
 
             if (data?.success) {
               loginForm.reset();
-              setSuccessLogin(data.success);
+              toast.success(data.success);
             }
           })
-          .catch(() => setErrorLogin("Something went wrong"));
+          .catch(() => toast.error("Something went wrong"));
       });
     } catch (error) {
       return;
@@ -101,8 +103,12 @@ const AuthBody = () => {
 
   async function sendOtp() {
     try {
-      setShowOtpField(true);
       const email = signInForm.getValues("email");
+      if (email === "" || email.length < 1) {
+        setOtpError("Email is required");
+        return;
+      }
+      setShowOtpField(true);
       const response = await SendVerificationToken(email);
       if (response.error) {
         setOtpError(response.error);
@@ -190,16 +196,20 @@ const AuthBody = () => {
     setRemainingTime("");
     setOtpExpirationTime(null);
     setErrorSignIn(null);
-    setErrorLogin(null);
     setOtpError(null);
     setSuccessSignIn(null);
-    setSuccessLogin(null);
     setSuccessOtp(null);
     loginForm.reset();
     signInForm.reset();
   }, [tab, loginForm, signInForm]);
 
   if (!isMounted) return null;
+
+  if (status === "loading") return null;
+
+  if (data && data.user) {
+    router.push("/");
+  }
 
   return (
     <>

@@ -22,16 +22,6 @@ input::selection {
   background-position: left bottom;
 }
 
-.title {
-  font-family: var(--title-font);
-  line-height: 4vw;
-  font-size: 9vw;
-}
-
-.title-slogan {
-  font-size: 2.2vw;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -83,6 +73,10 @@ body {
   -webkit-backdrop-filter: blur(15px);
 }
 
+.description {
+  font-family: var(--exo-font);
+}
+
 @media (max-width:1024px) {
   .texture-left {
     background-position: center bottom;
@@ -98,16 +92,6 @@ body {
 
   .title-slogan {
     font-size: 3.95vw;
-  }
-}
-
-@media (max-width:500px) {
-  .title {
-    font-size: 20vw;
-  }
-
-  .title-slogan {
-    font-size: 5vw;
   }
 }
 

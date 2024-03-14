@@ -6,18 +6,21 @@ const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   return (
     <div
-      className="lg:mt-24 mt-12 flex justify-center"
+      className="mt-12 flex justify-center w-full"
       onClick={() => {
         setIsPlaying(!isPlaying);
       }}
     >
       <div className=" border-[3px] flex items-center justify-evenly rounded-full gap-2 px-3 mx-auto">
         {isPlaying ? (
-          <button className="h-12 aspect-square relative" title="play-btn">
+          <button
+            aria-label="pause-btn"
+            className="h-12 aspect-square relative cursor-pointer"
+          >
             <Image fill src={"/assets/pause.png"} alt="play btn" />
           </button>
         ) : (
-          <button className="h-12 aspect-square relative" title="pause-btn">
+          <button aria-label="play-btn" className="h-12 aspect-square relative">
             <Image fill src={"/assets/play.png"} alt="play btn" />
           </button>
         )}

@@ -1,10 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainNav from "./main-nav";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const Menu = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
     <>
       <button

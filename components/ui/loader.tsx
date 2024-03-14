@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { toast } from "react-hot-toast";
+import { X } from "lucide-react";
 
 const LoadingAnimation = () => {
   const [showLoading, setShowLoading] = useState(true);
@@ -8,6 +10,26 @@ const LoadingAnimation = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoading(false);
+      toast(
+        (t) => (
+          <span className="flex items-center">
+            Website is under development
+            <button aria-label="dismiss" onClick={() => toast.dismiss(t.id)}>
+              <X
+                size={20}
+                className="ms-2 bg-red-500 text-white rounded-full"
+              />
+            </button>
+          </span>
+        ),
+        {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        }
+      );
     }, 2000);
 
     return () => clearTimeout(timer);
