@@ -51,6 +51,7 @@ body {
 
 .swiper {
   width: 100%;
+
   max-width: 450px;
   height: 450px;
 }
@@ -77,7 +78,7 @@ body {
   font-family: var(--exo-font);
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .texture-left {
     background-position: center bottom;
   }

@@ -30,14 +30,14 @@ const Menu = () => {
             className={cn(
               "w-full bg-white h-1 rounded-full duration-300",
               isOpen &&
-                "rotate-45 absolute top-1/2 translate-y-1/2 bg-orange-600"
+                "rotate-45 absolute top-1/2 translate-y-1/2 bg-amber-500"
             )}
           ></span>
           <span
             className={cn(
               "w-full bg-white h-1 rounded-full duration-300",
               isOpen &&
-                "-rotate-45 absolute top-1/2 translate-y-1/2 bg-orange-600"
+                "-rotate-45 absolute top-1/2 translate-y-1/2 bg-amber-500"
             )}
           ></span>
         </div>

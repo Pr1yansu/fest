@@ -14,7 +14,7 @@ const WhatISGemisha = () => {
           </h2>
           <p
             className={cn(
-              "description xl:text-2xl md:text-xl text-base text-center mt-4"
+              "description xl:text-2xl md:text-xl text-base text-justify mt-4"
             )}
           >
             &ldquo;Experience GEMISHA 2024, a dynamic tech fest showcasing model

@@ -10,15 +10,15 @@ import Image from "next/image";
 const Events = [
   {
     url: "/assets/events/gaming.jpg",
-    name: "Gaming",
+    name: "Gaming Event",
   },
   {
     url: "/assets/events/bridge.jpg",
-    name: "Bridge",
+    name: "Bridge Building Competition",
   },
   {
     url: "/assets/events/eureka.jpg",
-    name: "Eureka",
+    name: "Idea Presentation",
   },
   {
     url: "/assets/events/model presentation.jpg",
@@ -26,15 +26,15 @@ const Events = [
   },
   {
     url: "/assets/events/poster.jpg",
-    name: "Poster",
+    name: "Technical Poster",
   },
   {
     url: "/assets/events/quiz.jpg",
-    name: "Quiz",
+    name: "Quiz Competition",
   },
   {
     url: "/assets/events/robotics.jpg",
-    name: "Robotics",
+    name: "Robotics Buildup",
   },
   {
     url: "/assets/events/web development.jpg",
@@ -57,7 +57,7 @@ const EventsCarousel = () => {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center rounded-xl"
               src={event.url}
               alt="gaming"
             />

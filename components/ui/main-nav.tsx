@@ -91,7 +91,7 @@ const MainNav: React.FC<NavProps> = ({ isOpen, setOpen }) => {
                     "text-3xl p-2 px-4 rounded-full",
                     link.name === "Auth" &&
                       "border-2 text-center text-teal-300 mb-12",
-                    link.active && "bordercustom rounded-full text-orange-600"
+                    link.active && "bordercustom rounded-full text-amber-500"
                   )}
                   href={link.link ? link.link : "/"}
                 >
