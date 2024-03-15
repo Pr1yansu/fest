@@ -30,7 +30,7 @@ const LoadingAnimation = () => {
           },
         }
       );
-    }, 2000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -52,9 +52,9 @@ const LoadingAnimation = () => {
             bottom: 0,
             zIndex: 9999,
           }}
-          initial={{ x: 0 }}
-          animate={{ x: 0 }}
-          exit={{ x: "100%" }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
           {[...Array(10)].map((_, index) => (

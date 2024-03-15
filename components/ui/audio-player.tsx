@@ -25,7 +25,7 @@ const AudioPlayer = () => {
         {isPlaying ? (
           <button
             aria-label="pause-btn"
-            className="h-12 aspect-square relative cursor-pointer"
+            className="h-12 aspect-square relative cursor-pointer z-20"
             onClick={togglePlay}
           >
             <Image fill src={"/assets/pause.png"} alt="pause btn" />
@@ -33,7 +33,7 @@ const AudioPlayer = () => {
         ) : (
           <button
             aria-label="play-btn"
-            className="h-12 aspect-square relative cursor-pointer"
+            className="h-12 aspect-square relative cursor-pointer z-20"
             onClick={togglePlay}
           >
             <Image fill src={"/assets/play.png"} alt="play btn" />

@@ -5,6 +5,8 @@ import "./globals.css";
 import Loading from "@/components/ui/loader";
 import ToastProvider from "@/providers/toast-provider";
 import AuthProvider from "@/providers/next-auth-session";
+import CursorProvider from "@/providers/cursor-cursor";
+import ContextDisableProvider from "@/providers/context-provider";
 
 const fontAll = localFont({
   src: "../public/assets/font/Machi.ttf",
@@ -33,13 +35,16 @@ export default function RootLayout({
   return (
     <AuthProvider>
       <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${fontAll.variable} ${fontExo.variable} ${fontTitle.variable}`}
-        >
-          <Loading />
-          {children}
-          <ToastProvider />
-        </body>
+        <ContextDisableProvider>
+          <body
+            className={`${fontAll.variable} ${fontExo.variable} ${fontTitle.variable}`}
+          >
+            <CursorProvider />
+            <Loading />
+            {children}
+            <ToastProvider />
+          </body>
+        </ContextDisableProvider>
       </html>
     </AuthProvider>
   );

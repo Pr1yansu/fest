@@ -84,20 +84,30 @@ const MainNav: React.FC<NavProps> = ({ isOpen, setOpen }) => {
             }}
           >
             <div className="relative text-white p-5 space-y-6 flex flex-col mt-[15vh]">
-              {Links.map((link, index) => (
-                <Link
-                  key={index}
-                  className={cn(
-                    "text-3xl p-2 px-4 rounded-full",
-                    link.name === "Auth" &&
-                      "border-2 text-center text-teal-300 mb-12",
-                    link.active && "bordercustom rounded-full text-amber-500"
-                  )}
-                  href={link.link ? link.link : "/"}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {Links.map((link, index) =>
+                link.name === "Logout" ? (
+                  <button
+                    key={index}
+                    onClick={logoutHandler}
+                    className="text-3xl p-2 px-4 rounded-full border-2 text-center text-teal-300 mb-12"
+                  >
+                    {link.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={index}
+                    className={cn(
+                      "text-3xl p-2 px-4 rounded-full",
+                      link.name === "Auth" &&
+                        "border-2 text-center text-teal-300 mb-12",
+                      link.active && "bordercustom rounded-full text-amber-500"
+                    )}
+                    href={link.link ? link.link : "/"}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
             </div>
           </m.div>
         </m.div>

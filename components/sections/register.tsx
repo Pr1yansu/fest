@@ -5,7 +5,7 @@ import React from "react";
 
 const Register = () => {
   return (
-    <section className="texture-left relative md:py-20 py-10">
+    <section className="md:py-20 py-10 registerBg">
       <div className="lg:flex">
         <div className="lg:w-1/2 w-full">
           <Image
@@ -19,7 +19,7 @@ const Register = () => {
         </div>
         <div className="max-lg:mx-auto lg:w-1/2 w-full text-center items-center space-y-6 px-4 ">
           <Link
-            className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-1 hover:border-amber-500 hover:text-amber-500 rounded-full w-full text-center px-4 duration-100"
+            className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-1 hover:border-amber-500 hover:text-amber-500 rounded-full w-full text-center px-4 duration-100 relative z-20"
             href={"/register"}
           >
             Register here
@@ -38,19 +38,8 @@ const Register = () => {
           GARGI MEMORIAL INSTITUTE OF TECHNOLOGY{" "}
           <Link href="https://maps.app.goo.gl/HFEqK66RQNSEnfd66">
             <LocateFixed size={40} className="text-amber-500" />
-            
           </Link>
         </h3>
-      </div>
-      <div className="w-full absolute bottom-0">
-        <Image
-          width={0}
-          height={0}
-          sizes="100vw"
-          src={"/assets/GMIT-campus.png"}
-          className="w-full object-cover object-center opacity-30 grayscale"
-          alt="campus"
-        />
       </div>
     </section>
   );

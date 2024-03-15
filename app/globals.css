@@ -16,6 +16,12 @@ input::selection {
   background-position: left bottom;
 }
 
+.registerBg {
+  background: url("../public/assets/register-bg.png");
+  background-size: cover;
+  background-position: left bottom;
+}
+
 .texture-right {
   background: url("../public/assets/backeground-right.png");
   background-size: cover;

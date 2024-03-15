@@ -49,14 +49,13 @@ const HomeSection = () => {
               <div className="flex justify-center">
                 <div>
                   <Link
-            className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-1 flex items-center justify-center gap-2 mt-8 hover:border-amber-500 hover:text-amber-500 rounded-full w-full text-center px-4 duration-100"
-            href={"/events"}
-          >
-            Explore Events
-            <Compass/>
-          </Link>
+                    className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-1 flex items-center justify-center gap-2 mt-8 hover:border-amber-500 hover:text-amber-500 rounded-full w-full text-center px-4 duration-100 relative z-20"
+                    href={"/events"}
+                  >
+                    Explore Events
+                    <Compass />
+                  </Link>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -65,7 +64,7 @@ const HomeSection = () => {
               width={0}
               height={0}
               sizes="100vw"
-              className="object-cover object-center w-full"
+              className="object-cover object-center w-full relative z-20"
               src={"/assets/Hero-Section.gif"}
               alt="here image"
             />
