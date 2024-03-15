@@ -8,7 +8,6 @@ interface PosterCardProps {
   poster: string;
   title: string;
   date: string;
-  time: string;
   googleForm?: string;
 }
 
@@ -16,7 +15,6 @@ const PosterCard = ({
   poster,
   title,
   date,
-  time,
   googleForm,
 }: PosterCardProps) => {
   const [openFullImage, setOpenFullImage] = useState(false);
@@ -32,7 +30,6 @@ const PosterCard = ({
           <div>
             <h3 className="text-2xl font-bold text-white">{title}</h3>
             <p className="text-orange-500">{date}</p>
-            <p className="text-orange-500">{time}</p>
             <Link href="/rules" className="flex justify-center flex-col mt-4">
               <button className="text-white border-2 border-white px-4 py-2 rounded-full mt-2 hover:bg-white hover:text-black transition-all duration-100 flex items-center justify-center gap-2">
                 Rules <Pencil size={16} />

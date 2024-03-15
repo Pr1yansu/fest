@@ -8,11 +8,11 @@ const Footer = () => {
       <Container>
         <div className="mt-12">
           <h3 className="lg:text-[3vw] text-3xl text-center text-white">
-            Our <span className="text-orange-600">Sponsors</span>
+            Our <span className="text-amber-500">Sponsors</span>
           </h3>
           <div className="sponsors h-40 lg:mt-16 mt-8 w-full rounded-2xl"></div>
           <h3 className="lg:text-[3vw] text-3xl text-center text-white lg:mt-20 mt-6">
-            Get In <span className="text-orange-600">Touch</span>
+            Get In <span className="text-amber-500">Touch</span>
           </h3>
           <div className={cn("mt-6 text-white description")}>
             <p className="text-center md:text-2xl text-lg">

@@ -8,7 +8,25 @@ const cards = [
     poster: "/assets/poster/web-dev.jpg",
     title: "Web Development",
     date: "28 March 2024",
-    time: "3 Hours",
+    googleForm: "https://forms.gle/A7NBJJ3jTCybDExw7",
+  },
+
+    {
+    poster: "/assets/poster/web-dev.jpg",
+    title: "Web Development",
+    date: "28 March 2024",
+    googleForm: "https://forms.gle/A7NBJJ3jTCybDExw7",
+  },
+      {
+    poster: "/assets/poster/web-dev.jpg",
+    title: "Web Development",
+    date: "28 March 2024",
+    googleForm: "https://forms.gle/A7NBJJ3jTCybDExw7",
+  },
+      {
+    poster: "/assets/poster/web-dev.jpg",
+    title: "Web Development",
+    date: "28 March 2024",
     googleForm: "https://forms.gle/A7NBJJ3jTCybDExw7",
   },
 ];

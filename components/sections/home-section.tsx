@@ -47,13 +47,16 @@ const HomeSection = () => {
                 <AudioPlayer />
               </div>
               <div className="flex justify-center">
-                <Link
-                  className="border-2 px-2 mx-auto mt-12 capitalize text-white lg:text-2xl sm:text-xl text-lg flex gap-2 items-center p-1 rounded-full"
-                  href={"/events"}
-                >
-                  Explore events
-                  <Compass />
-                </Link>
+                <div>
+                  <Link
+            className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-1 flex items-center justify-center gap-2 mt-8 hover:border-amber-500 hover:text-amber-500 rounded-full w-full text-center px-4 duration-100"
+            href={"/events"}
+          >
+            Explore Events
+            <Compass/>
+          </Link>
+                </div>
+                
               </div>
             </div>
           </div>
