@@ -12,8 +12,8 @@ const Login = async () => {
     redirect("/");
   }
   return (
-    <section className="flex justify-center items-center h-screen">
-      <Card className={cn("w-[380px]")}>
+    <section className="flex justify-center items-center h-screen bg-[#020314]">
+      <Card className={cn("w-[380px] relatvie z-20")}>
         <CardHeader>
           <AuthHeader />
         </CardHeader>
