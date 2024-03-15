@@ -11,10 +11,9 @@
 
   function i(t) {
     document.removeEventListener("mousemove", i);
-    document.removeEventListener("touchstart", i);
+
     document.addEventListener("mousemove", d);
-    document.addEventListener("touchmove", d);
-    document.addEventListener("touchstart", u);
+
     d(t);
     a();
     o();
@@ -33,7 +32,7 @@
       f.clearRect(0, 0, f.canvas.width, f.canvas.height);
       f.globalCompositeOperation = "lighter";
       f.strokeStyle = "hsla(" + Math.round(l.update()) + "100%,90%,100%,1)";
-      f.strokeStyle = "rgb(62 244 212)";
+      f.strokeStyle = "hsla(" + Math.round(l.update()) + ",100%,50%,1)";
       f.lineWidth = 1;
       for (var t, e = 0; e < E.trails; e++) {
         t = w[e];
@@ -89,10 +88,10 @@
     E = {};
 
   E.friction = 0.5;
-  E.trails = 20;
-  E.size = 25;
-  E.dampening = 0.1;
-  E.tension = 0.97;
+  E.trails = 30;
+  E.size = 45;
+  E.dampening = 0.25;
+  E.tension = 0.95;
 
   e.prototype = (function () {
     var t = 0;
@@ -186,7 +185,7 @@
       t.webkitRequestAnimationFrame ||
       t.mozRequestAnimationFrame ||
       function (e) {
-        t.setTimeout(e, 1e3 / 60);
+        t.setTimeout();
       }
     );
   })();
@@ -202,7 +201,6 @@
       offset: 285,
     });
     document.addEventListener("mousemove", i);
-    document.addEventListener("touchstart", i);
     document.body.addEventListener("orientationchange", s);
     t.addEventListener("resize", s);
     t.addEventListener("focus", r);
