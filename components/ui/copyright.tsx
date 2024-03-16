@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import React from "react";
 
 const Copyright = () => {
@@ -9,10 +10,9 @@ const Copyright = () => {
       )}
     >
       <h4>Copyright &copy; 2024 Community of webweeb. All rights reserved.</h4>
-      <div className="flex gap-2 flex-wrap justify-center">
-        <h4>Code of conduct</h4>
-        <h4>Privacy policy</h4>
-      </div>
+      <Link href="/privacy-policy" passHref>
+        Privacy policy
+      </Link>
     </div>
   );
 };

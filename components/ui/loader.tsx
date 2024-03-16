@@ -3,16 +3,28 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { X } from "lucide-react";
+import { useSession } from "next-auth/react";
 
 const LoadingAnimation = () => {
   const [showLoading, setShowLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const { data } = useSession();
+
+  useEffect(() => {
+    setMounted(true);
+    if (data?.user?.name) {
+      toast.success(`Welcome back ${data.user.name}`);
+    } else {
+      toast.success("Welcome to Gemisha");
+    }
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoading(false);
       toast(
         (t) => (
-          <span className="flex items-center">
+          <span className="flex items-center description">
             Website is under development
             <button aria-label="dismiss" onClick={() => toast.dismiss(t.id)}>
               <X
@@ -34,6 +46,11 @@ const LoadingAnimation = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  if (!mounted)
+    return (
+      <section className="h-screen w-screen flex justify-center items-center bg-black" />
+    );
 
   return (
     <AnimatePresence>

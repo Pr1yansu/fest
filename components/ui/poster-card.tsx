@@ -3,6 +3,7 @@ import { CalendarCheckIcon, Pencil, X } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 interface PosterCardProps {
   poster: string;
@@ -27,10 +28,17 @@ const PosterCard = ({ poster, title, date, googleForm }: PosterCardProps) => {
   return (
     <div className="xl:col-span-3 lg:col-span-4 md:col-span-6 col-span-12 p-6">
       <div
-        className="relative h-auto cursor-pointer group"
+        className="relative z-0 h-auto cursor-pointer group"
         onClick={() => setOpenFullImage(true)}
       >
-        <img src={poster} alt={title} className="h-full w-full object-cover" />
+        <Image
+          width={0}
+          height={0}
+          sizes="100vw"
+          src={poster}
+          alt={title}
+          className="h-full w-full object-cover relative z-0"
+        />
         <div className="p-4 absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black/80 group-hover:opacity-100 opacity-0 duration-100">
           <div>
             <h3 className="text-2xl font-bold text-white">{title}</h3>

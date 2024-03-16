@@ -38,7 +38,6 @@ body {
 }
 
 .sidebar {
-  background: url("../public/assets/glass-texture.png");
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
@@ -93,12 +92,28 @@ body {
     background-position: center bottom;
   }
 
-  .title {
-    font-size: 16vw;
-  }
+}
 
-  .title-slogan {
-    font-size: 3.95vw;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+span,
+li,
+ol,
+ul,
+img {
+  position: relative;
+  z-index: 9;
+}
+
+@media (max-width: 1024px) {
+  #canvas {
+    display: none;
   }
 }
 

@@ -10,6 +10,7 @@ const Titles = () => {
         width={0}
         sizes="100vw"
         alt="Gemisha"
+        quality={100}
         className="w-full object-cover object-center px-4"
         src={"/assets/title-slogan.png"}
       />
@@ -18,6 +19,7 @@ const Titles = () => {
         width={0}
         sizes="100vw"
         alt="Gemisha"
+        quality={100}
         className="w-full object-cover object-center"
         src={"/assets/Title-gemisha.png"}
       />
