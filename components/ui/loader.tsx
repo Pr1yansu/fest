@@ -33,7 +33,6 @@ const LoadingAnimation = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <AnimatePresence>
       {showLoading && (

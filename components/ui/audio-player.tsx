@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion as m } from "framer-motion";
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
@@ -19,6 +23,8 @@ const AudioPlayer = () => {
       setIsPlaying(!isPlaying);
     }
   };
+
+  if (!mounted) return null;
 
   return (
     <div className="mt-12 flex justify-center w-full">

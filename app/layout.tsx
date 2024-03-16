@@ -7,6 +7,7 @@ import ToastProvider from "@/providers/toast-provider";
 import AuthProvider from "@/providers/next-auth-session";
 import CursorProvider from "@/providers/cursor-cursor";
 import ContextDisableProvider from "@/providers/context-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontAll = localFont({
   src: "../public/assets/font/Machi.ttf",
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Loading />
             {children}
             <ToastProvider />
+            <SpeedInsights />
           </body>
         </ContextDisableProvider>
       </html>
