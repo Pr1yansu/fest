@@ -10,7 +10,11 @@ const Copyright = () => {
       )}
     >
       <h4>Copyright &copy; 2024 Community of webweeb. All rights reserved.</h4>
-      <Link href="/privacy-policy" passHref>
+      <Link
+        href="/privacy-policy"
+        passHref
+        className="max-sm:flex justify-center mt-4 lg:mt-0 w-full lg:w-auto"
+      >
         Privacy policy
       </Link>
     </div>

@@ -35,6 +35,7 @@ const PosterCard = ({ poster, title, date, googleForm }: PosterCardProps) => {
           width={0}
           height={0}
           sizes="100vw"
+          loading="eager"
           src={poster}
           alt={title}
           className="h-full w-full object-cover relative z-0"
@@ -78,7 +79,11 @@ const PosterCard = ({ poster, title, date, googleForm }: PosterCardProps) => {
               exit={{ opacity: 0, scale: 0 }}
               transition={{ duration: 0.1 }}
             >
-              <img
+              <Image
+                width={0}
+                height={0}
+                sizes="100vw"
+                loading="eager"
                 src={poster}
                 alt={title}
                 className="h-full w-auto object-contain object-center max-w-full max-h-full rounded-md"
