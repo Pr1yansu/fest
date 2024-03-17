@@ -31,10 +31,7 @@ const PosterCard = ({ poster, title, date, googleForm }: PosterCardProps) => {
         className="relative z-0 h-auto cursor-pointer group"
         onClick={() => setOpenFullImage(true)}
       >
-        <Image
-          width={0}
-          height={0}
-          sizes="100vw"
+        <img
           loading="eager"
           src={poster}
           alt={title}
