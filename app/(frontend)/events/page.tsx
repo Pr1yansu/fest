@@ -13,7 +13,7 @@ const cards = [
   },
 
   {
-    poster: "/assets/poster/innova.webp",
+    poster: "/assets/poster/model.webp",
     title: "Innovative Model Presentation",
     date: "28 March 2024",
     googleForm: "https://forms.gle/wGSReecC22S9wGSL9",
