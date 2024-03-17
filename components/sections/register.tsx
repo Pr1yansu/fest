@@ -20,7 +20,7 @@ const Register = () => {
         <div className="max-lg:mx-auto lg:w-1/2 w-full text-center items-center space-y-6 px-4 ">
           <Link
             className="border-2 mx-auto capitalize text-white lg:text-2xl sm:text-xl text-lg p-1 hover:border-amber-500 hover:text-amber-500 rounded-full w-full text-center px-4 duration-100 relative z-20"
-            href={"/register"}
+            href={"/events"}
           >
             Register here
           </Link>
@@ -36,8 +36,12 @@ const Register = () => {
         <h2 className="text-teal-300  text-center mb-4">TECH FEST VENUE</h2>
         <h3 className="text-white  text-center flex flex-col justify-center items-center flex-wrap gap-4">
           GARGI MEMORIAL INSTITUTE OF TECHNOLOGY{" "}
-          <Link href="https://maps.app.goo.gl/HFEqK66RQNSEnfd66">
-            <LocateFixed size={40} className="text-amber-500" />
+          <Link
+            href="https://maps.app.goo.gl/HFEqK66RQNSEnfd66"
+            className="text-amber-500 description text-xl flex items-center gap-2 w-full justify-center"
+          >
+            Click Here
+            <LocateFixed size={40} />
           </Link>
         </h3>
       </div>

@@ -24,7 +24,7 @@ const Sponsors = [
 
 const Footer = () => {
   return (
-    <section className="texture-left pt-6">
+    <section className="bg-[#0e0e15] pt-6 ">
       <Container>
         <div className="mt-12">
           <h3 className="lg:text-[3vw] text-3xl text-center text-white">

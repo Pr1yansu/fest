@@ -58,6 +58,7 @@ const EventsCarousel = () => {
               height={0}
               sizes="100vw"
               className="w-full h-full object-cover object-center rounded-xl"
+              loading="eager"
               src={event.url}
               alt="gaming"
             />

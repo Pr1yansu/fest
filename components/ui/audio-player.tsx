@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { motion as m } from "framer-motion";
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -29,20 +28,18 @@ const AudioPlayer = () => {
   return (
     <div className="mt-12 flex justify-center w-full">
       <div className="border-[3px] flex items-center justify-evenly rounded-full gap-2 px-3 mx-auto">
-        <m.button
+        <button
           aria-label="pause-btn"
           className="h-12 aspect-square relative cursor-pointer z-20"
           onClick={togglePlay}
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          onTouchStart={togglePlay}
         >
           <Image
             fill
             src={isPlaying ? "/assets/pause.png" : "/assets/play.png"}
             alt="pause btn"
           />
-        </m.button>
+        </button>
 
         <div className="flex overflow-hidden">
           <Image

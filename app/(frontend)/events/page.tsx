@@ -9,9 +9,9 @@ const cards = [
     poster: "/assets/poster/web.webp",
     title: "Web Development",
     date: "28 March 2024",
-    googleForm: "https://forms.gle/A7NBJJ3jTCybDExw7",
+    googleForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeEEm5x0qIDepcI5HBsOY81ITBYDqP4dOLWKmYpJz-z6JAtJA/viewform?usp=sf_link",
   },
-
   {
     poster: "/assets/poster/model.webp",
     title: "Innovative Model Presentation",
@@ -28,14 +28,16 @@ const cards = [
     poster: "/assets/poster/mind.webp",
     title: "Quiz Competition",
     date: "28 March 2024",
-    googleForm: "https://forms.gle/RG8HwiTy8wYDCrDb9",
+    googleForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfMnDT8d1ujCuTbz71PlHuq-rC93RSdYIdq27AaP-3dAtEJ5w/viewform?usp=sf_link",
   },
 
   {
     poster: "/assets/poster/gaming.webp",
     title: "BGMI & FREE FIRE Competition",
     date: "28 March 2024",
-    googleForm: "https://forms.gle/5dM9cNAsNzUZGHfBA",
+    googleForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLScJtv_picrgwccEooXDVV41TiFNberPhNd8DzMQ8ajPyXsh8w/viewform?usp=sf_link",
   },
   {
     poster: "/assets/poster/eureka.webp",

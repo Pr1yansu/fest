@@ -93,8 +93,11 @@ const PrivacyPolicy = () => {
             <br />
             If you have any questions or concerns about our privacy policy,
             please contact us at{" "}
-            <a href="mailto:code@cce.edu.in" className="text-primary-1">
-              code@cce.edu.in
+            <a
+              href="mailto:snehashis.webweeb@gmail.com"
+              className="text-primary-1"
+            >
+              here...
             </a>
             .
           </p>
